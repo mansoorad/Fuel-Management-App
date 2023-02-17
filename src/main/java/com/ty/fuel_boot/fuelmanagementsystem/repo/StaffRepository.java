@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ty.fuel_boot.fuelmanagementsystem.dto.Staff;
 
-public interface StaffReposiratory extends JpaRepository<Staff, Integer> {
+public interface StaffRepository extends JpaRepository<Staff, Integer> {
 
 }
