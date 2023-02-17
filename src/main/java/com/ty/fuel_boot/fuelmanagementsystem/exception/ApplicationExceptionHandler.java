@@ -10,5 +10,14 @@ import com.ty.fuel_boot.fuelmanagementsystem.util.ResponseStructure;
 
 @RestControllerAdvice
 public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler {
-
+	
+	@ExceptionHandler(NoSuchIdFoundException.class)
+	public ResponseEntity<ResponseStructure<String>> noSuchIdFoundException(NoSuchIdFoundException exception){
+		ResponseStructure<String> responseStructure = new ResponseStructure<String>();
+		ResponseEntity<ResponseStructure<String>> responseEntity = new ResponseEntity<ResponseStructure<String>>(responseStructure, HttpStatus.NOT_FOUND);
+		responseStructure.setStatus(HttpStatus.NOT_FOUND.value());
+		responseStructure.setMessage("No Id Found");
+		responseStructure.setData(exception.getMessage());
+		return responseEntity;
+	}
 }
