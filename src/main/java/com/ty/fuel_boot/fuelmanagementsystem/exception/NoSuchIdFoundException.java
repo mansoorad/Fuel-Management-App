@@ -2,7 +2,7 @@ package com.ty.fuel_boot.fuelmanagementsystem.exception;
 
 public class NoSuchIdFoundException extends RuntimeException {
 
-
+	private String message;
 
 	public NoSuchIdFoundException(String message) {
 		super();
@@ -16,6 +16,7 @@ public class NoSuchIdFoundException extends RuntimeException {
 
 	@Override
 	public String getMessage() {
+		return message;
 
-
+	}
 }

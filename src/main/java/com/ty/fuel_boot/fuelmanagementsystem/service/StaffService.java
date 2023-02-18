@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.ty.fuel_boot.fuelmanagementsystem.dao.StaffDao;
 import com.ty.fuel_boot.fuelmanagementsystem.dto.Staff;
 import com.ty.fuel_boot.fuelmanagementsystem.exception.NoSuchIdFoundException;
-import com.ty.fuel_boot.fuelmanagementsystem.exception.UnableToUpdateException;
 import com.ty.fuel_boot.fuelmanagementsystem.util.ResponseStructure;
 
 @Service
@@ -42,7 +41,7 @@ public class StaffService {
 			responseStructure.setData(staffDao.updateStaff(staff));
 			return responseEntity;
 		} else {
-			throw new UnableToUpdateException("Unable to update staff as no staff found");
+			throw new NoSuchIdFoundException("Unable to update staff as no staff found");
 		}
 	}
 
