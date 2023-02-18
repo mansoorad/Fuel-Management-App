@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.ty.fuel_boot.fuelmanagementsystem.dao.AvailabilityDao;
-import com.ty.fuel_boot.fuelmanagementsystem.dto.Admin;
 import com.ty.fuel_boot.fuelmanagementsystem.dto.Availability;
 import com.ty.fuel_boot.fuelmanagementsystem.exception.NoSuchIdFoundException;
 import com.ty.fuel_boot.fuelmanagementsystem.util.ResponseStructure;
