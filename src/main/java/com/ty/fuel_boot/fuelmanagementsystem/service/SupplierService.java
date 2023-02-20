@@ -2,6 +2,7 @@ package com.ty.fuel_boot.fuelmanagementsystem.service;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ import com.ty.fuel_boot.fuelmanagementsystem.util.ResponseStructure;
 @Service
 public class SupplierService {
 	
+	@Autowired
 	private SupplierDao supplierDao;
 	
 	public ResponseEntity<ResponseStructure<Supplier>> saveSupplier(Supplier supplier){

@@ -68,7 +68,7 @@ public class SupplierController {
 			@ApiResponse(code = 404, message = "Not found"),
 			@ApiResponse(code = 500, message = "Internal server error"),
 			@ApiResponse(code = 403, message = "Forbidden"), @ApiResponse(code = 403, message = "Method Not Allowed") })
-	@DeleteMapping(value={"/id"},produces = MediaType.APPLICATION_JSON_VALUE)
+	@DeleteMapping(value="/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
 	ResponseEntity<ResponseStructure<Supplier>> deleteSupplierById(@Valid @PathVariable int id) {
 		return supplierService.deleteSupplierById(id);
 	}
