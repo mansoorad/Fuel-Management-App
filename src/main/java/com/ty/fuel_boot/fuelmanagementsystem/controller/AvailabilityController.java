@@ -58,8 +58,8 @@ public class AvailabilityController {
 	@PutMapping(consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, produces = {
 			MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<ResponseStructure<Availability>> updateAvailability(@RequestBody Availability availability,
-			@RequestParam int availabilityid) {
-		return availabilityService.updateAvailability(availability, availabilityid);
+			@RequestParam int id) {
+		return availabilityService.updateAvailability(availability, id);
 	}
 
 	@ApiOperation(value = "Delete The Availability", notes = "Used To Delete The Availability")

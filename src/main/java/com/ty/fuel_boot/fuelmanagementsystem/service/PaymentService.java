@@ -33,6 +33,7 @@ public class PaymentService {
 		ResponseEntity<ResponseStructure<Payment>> responseEntity = new 
 				ResponseEntity<ResponseStructure<Payment>>(responseStructure, HttpStatus.OK);
 		if(optional.isPresent()) {
+			payment.setId(id);
 			responseStructure.setStatus(HttpStatus.OK.value());
 			responseStructure.setMessage("Payment Updated Successfully");
 			responseStructure.setData(dao.updatePayment(payment));
