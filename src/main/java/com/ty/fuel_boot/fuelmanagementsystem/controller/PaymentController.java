@@ -53,7 +53,7 @@ public class PaymentController {
 	@ApiResponses(value = {@ApiResponse(code = 500, message = "Internal Server Error"),
 			@ApiResponse(code = 404, message = "Not Found")})
 	@GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE})
-	public ResponseEntity<ResponseStructure<Payment>> getPaymentById(int id){
+	public ResponseEntity<ResponseStructure<Payment>> getPaymentById(@RequestParam int id){
 		return service.getPaymentById(id);
 	}
 	
